@@ -43,14 +43,31 @@ npm run preview
 
 ## Deployment to GitHub Pages
 
-The site is automatically deployed to GitHub Pages. To deploy manually:
+This site uses GitHub Actions for automatic deployment. Every push to the `main` branch will automatically build and deploy the site.
+
+### First-time Setup
+
+1. Go to your repository on GitHub
+2. Navigate to **Settings** → **Pages**
+3. Under "Build and deployment":
+   - Source: Select **GitHub Actions**
+4. Push your code to the `main` branch
+
+The GitHub Action will automatically:
+- Install dependencies
+- Build the project
+- Deploy to GitHub Pages
+
+### Manual Deployment (if needed)
+
+If you need to deploy manually without GitHub Actions:
 
 1. Build the project:
    ```bash
    npm run build
    ```
 
-2. The `dist` folder contains the static files that should be deployed to the root of your GitHub Pages site.
+2. The `dist` folder contains the static files that can be deployed to any static hosting service.
 
 ## Project Structure
 
