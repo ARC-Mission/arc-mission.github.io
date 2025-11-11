@@ -1,0 +1,33 @@
+- id: 1
+  title: 'Microgrid Resilience Simulator'
+  status: 'Active'
+  description: 'Developing a simulation tool to model and enhance the resilience of local energy microgrids against disruptions, ensuring stable power for critical infrastructure.'
+  focusAreas: 
+    - 'Energy and Power'
+    - 'Critical Infrastructure'
+    - 'Data-Assisted Decision Making'
+  imageUrl: '/assets/projects/microgrid.jpg'
+- id: 2
+  title: 'Decentralized Mesh Networks'
+  status: 'Active'
+  description: 'Creating a robust, ad-hoc communication network for disaster response scenarios where traditional infrastructure is unavailable. The network prioritizes low-power consumption and security.'
+  focusAreas: 
+    - 'Advanced Communication'
+    - 'Extreme Environments'
+  imageUrl: '/assets/projects/mesh_networks.jpg'
+- id: 3
+  title: 'Explainable AI for Emergency Planners'
+  status: 'Proposed'
+  description: 'Designing an intuitive, data-assisted dashboard that uses explainable machine learning models to help emergency planners make informed decisions during critical events.'
+  focusAreas: 
+    - 'Data-Assisted Decision Making'
+    - 'Human Resilience'
+  imageUrl: '/assets/projects/explainable_ai.jpg'
+- id: 4
+  title: 'Autonomous Systems for Maritime Search'
+  status: 'Proposed'
+  description: 'Prototyping unmanned surface vehicles (USVs) equipped with sensor suites for autonomous search and monitoring operations in coastal maritime environments.'
+  focusAreas: 
+    - 'Maritime Operations'
+    - 'Autonomy & Unm unmanned Systems'
+  imageUrl: '/assets/projects/maritime_search.jpg'
