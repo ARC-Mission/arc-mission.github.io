@@ -73,6 +73,7 @@ If you need to deploy manually without GitHub Actions:
 
 - `App.tsx` - Main application component
 - `components/` - React components
-- `data/` - YAML data files for blog posts, team members, and projects
+- `public/data/` - YAML data files for blog posts, team members, and projects
 - `types.ts` - TypeScript type definitions
 - `constants.ts` - Application constants
+- `public/` - Static assets served at the root (includes data files and .nojekyll)
