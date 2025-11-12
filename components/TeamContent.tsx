@@ -11,14 +11,14 @@ const TeamContent: React.FC<TeamContentProps> = ({ members }) => {
       <div className="max-w-5xl mx-auto">
         <h1 className="text-5xl md:text-7xl font-medium text-white mb-12 text-center">Our Team</h1>
         <p className="text-lg text-neutral-300 text-center max-w-3xl mx-auto mb-16">
-          Meet the dedicated students and leaders driving the Alliance for Resilient Technology Munich forward.
+          Meet the dedicated students and leaders driving the Alliance for Resilient Computing Munich forward.
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
           {members.map((member) => (
             <div key={member.id} className="text-center group">
               <div className="relative aspect-square mb-4">
-                <img 
-                  src={member.imageUrl} 
+                <img
+                  src={member.imageUrl}
                   alt={`Portrait of ${member.name}`}
                   className="rounded-full w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
                 />

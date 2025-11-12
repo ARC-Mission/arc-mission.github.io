@@ -2,12 +2,12 @@
 title: "Welcome to ARC Munich"
 date: "November 1, 2025"
 author: "ARC Munich Team"
-summary: "Introducing the Alliance for Resilient Technology Munich - a community-driven initiative focused on dual-use technology development and innovation."
+summary: "Introducing the Alliance for Resilient Computing Munich - a community-driven initiative focused on dual-use technology development and innovation."
 slug: "welcome-to-arcm"
 cover: "/assets/blog/welcome-cover.jpg"
 ---
 
-We're excited to announce the launch of the Alliance for Resilient Technology Munich (ARC Munich), a community-driven initiative focused on dual-use technology development and innovation.
+We're excited to announce the launch of the Alliance for Resilient Computing Munich (ARC Munich), a community-driven initiative focused on dual-use technology development and innovation.
 
 ## Our Mission
 

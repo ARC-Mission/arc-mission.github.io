@@ -1,6 +1,6 @@
-# ARCM - Alliance for Resilient Technology Munich
+# ARCM - Alliance for Resilient Computing Munich
 
-A website for the Alliance for Resilient Technology Munich, built with React, TypeScript, and Vite.
+A website for the Alliance for Resilient Computing Munich, built with React, TypeScript, and Vite.
 
 ## Local Development
 
