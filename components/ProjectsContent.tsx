@@ -13,19 +13,26 @@ const statusColor = (status: 'Active' | 'Proposed' | 'Completed') => {
 
 interface ProjectsContentProps {
   projects: Project[];
+  onProjectClick: (slug: string) => void;
 }
 
-const ProjectsContent: React.FC<ProjectsContentProps> = ({ projects }) => {
+const ProjectsContent: React.FC<ProjectsContentProps> = ({ projects, onProjectClick }) => {
+
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-12 py-12">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-5xl md:text-7xl font-medium text-white mb-4 text-center">Our Projects</h1>
         <p className="text-lg text-neutral-300 text-center max-w-3xl mx-auto mb-16">
-          Exploring and prototyping civilian and dual-use technical solutions inspired by critical technology themes.
+          Exploring and prototyping civilian and dual-use technical solutions inspired by critical technology themes. 
+          Click on any project to learn more and discover collaboration opportunities.
         </p>
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project) => (
-            <div key={project.id} className="bg-neutral-900/50 border border-neutral-800 rounded-lg flex flex-col group transition-all hover:border-neutral-700 hover:bg-neutral-900 overflow-hidden">
+            <div 
+              key={project.id} 
+              className="bg-neutral-900/50 border border-neutral-800 rounded-lg flex flex-col group transition-all hover:border-neutral-700 hover:bg-neutral-900 overflow-hidden cursor-pointer"
+              onClick={() => onProjectClick(project.slug)}
+            >
               <img src={project.imageUrl} alt={`Illustration for ${project.title}`} className="w-full h-48 object-cover" />
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex justify-between items-start mb-3">
@@ -45,10 +52,10 @@ const ProjectsContent: React.FC<ProjectsContentProps> = ({ projects }) => {
                         ))}
                     </div>
                 </div>
-                  <a href="#" className="inline-flex items-center text-white font-medium self-start mt-auto group-hover:text-blue-400 transition-colors">
+                <button className="inline-flex items-center text-white font-medium self-start mt-auto group-hover:text-blue-400 transition-colors">
                   Learn more
                   <ArrowRightIcon className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
-                </a>
+                </button>
               </div>
             </div>
           ))}

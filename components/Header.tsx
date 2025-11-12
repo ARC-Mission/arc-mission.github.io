@@ -1,5 +1,5 @@
 import React from 'react';
-import { SearchIcon, MenuIcon, ArcmLogo } from './Icons';
+import { MenuIcon, ArcmLogo } from './Icons';
 
 interface HeaderProps {
   onMenuClick: () => void;
@@ -19,11 +19,6 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
               <MenuIcon className="h-6 w-6" />
             </button>
             <ArcmLogo />
-          </div>
-          <div className="flex items-center space-x-4">
-            <button className="p-2 rounded-full text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors">
-              <SearchIcon className="h-5 w-5" />
-            </button>
           </div>
         </div>
       </div>

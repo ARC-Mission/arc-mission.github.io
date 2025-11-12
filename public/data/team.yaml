@@ -1,24 +1,4 @@
 - id: 1
-  name: 'Alex Schmidt'
+  name: 'Bella Kozlova'
   role: 'President & Co-Founder'
-  imageUrl: '/assets/team/alex_schmidt.jpg'
-- id: 2
-  name: 'Maria Weber'
-  role: 'VP of Engineering'
-  imageUrl: '/assets/team/maria_weber.jpg'
-- id: 3
-  name: 'Klaus Müller'
-  role: 'Head of Research'
-  imageUrl: '/assets/team/klaus_mueller.jpg'
-- id: 4
-  name: 'Lena Bauer'
-  role: 'Industry Partnerships Lead'
-  imageUrl: '/assets/team/lena_bauer.jpg'
-- id: 5
-  name: 'Felix Schneider'
-  role: 'Project Lead, Resilient Comms'
-  imageUrl: '/assets/team/felix_schneider.jpg'
-- id: 6
-  name: 'Sophie Fischer'
-  role: 'Ethics & Governance Officer'
-  imageUrl: '/assets/team/sophie_fischer.jpg'
+  imageUrl: '/assets/team/bella_kozlova.png'

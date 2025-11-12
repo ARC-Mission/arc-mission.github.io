@@ -24,22 +24,21 @@ const AboutContent: React.FC = () => {
               Our mission is to explore and prototype civilian and dual-use technical solutions inspired by critical technology themes, with strong ethics, openness, and industry collaboration. We position ourselves at the intersection of academic research, the deep-tech industry, and real-world challenges in technological resilience.
             </p>
             <div className="flex items-center space-x-6 text-sm">
-              <button className="bg-neutral-800 text-white px-5 py-3 rounded-full hover:bg-neutral-700 transition-colors">
+              <a href="https://arc-munich.github.io" target="_blank" rel="noopener noreferrer" className="bg-neutral-800 text-white px-5 py-3 rounded-full hover:bg-neutral-700 transition-colors">
                 Our Mission
-              </button>
-              <a href="#" className="flex items-center group text-white">
+              </a>
+              <a href="https://arc-munich.github.io" target="_blank" rel="noopener noreferrer" className="flex items-center group text-white">
                 Our Charter
                 <ArrowRightIcon className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
           </div>
-          <div>
+          <div className="flex justify-center">
             <img 
-              src="/assets/about-vision.jpg"
-              alt="Abstract technology illustration" 
-              className="rounded-lg shadow-2xl shadow-blue-900/20"
+              src="/assets/logo_white.png"
+              alt="ARCM Logo - A vision of resilient systems" 
+              className="w-full max-w-md"
             />
-            <p className="text-xs text-neutral-500 mt-2 text-center">Illustration: A vision of resilient systems.</p>
           </div>
         </div>
         

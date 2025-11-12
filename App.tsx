@@ -6,11 +6,20 @@ import AboutContent from './components/AboutContent';
 import BlogContent from './components/BlogContent';
 import TeamContent from './components/TeamContent';
 import ProjectsContent from './components/ProjectsContent';
+import BlogPostPage from './components/BlogPostPage';
+import ProjectPage from './components/ProjectPage';
+import 'highlight.js/styles/github-dark.css';
 
 declare const jsyaml: { load: (str: string) => unknown };
 
+type ViewState = 
+  | { type: 'page'; page: Page }
+  | { type: 'blog-post'; slug: string }
+  | { type: 'project'; slug: string };
+
 const App: React.FC = () => {
   const [activePage, setActivePage] = useState<Page>('about');
+  const [viewState, setViewState] = useState<ViewState>({ type: 'page', page: 'about' });
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
@@ -22,24 +31,22 @@ const App: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [blogRes, teamRes, projectsRes] = await Promise.all([
-          fetch('/data/blog.yaml'),
-          fetch('/data/team.yaml'),
-          fetch('/data/projects.yaml')
+        const [contentRes, teamRes] = await Promise.all([
+          fetch('/data/content-index.json'),
+          fetch('/data/team.yaml')
         ]);
 
-        if (!blogRes.ok || !teamRes.ok || !projectsRes.ok) {
+        if (!contentRes.ok || !teamRes.ok) {
           throw new Error('Failed to fetch data');
         }
-        
-        const blogText = await blogRes.text();
-        const teamText = await teamRes.text();
-        const projectsText = await projectsRes.text();
 
-        setBlogPosts(jsyaml.load(blogText) as BlogPost[]);
+        const contentData = await contentRes.json();
+        const teamText = await teamRes.text();
+
+        setBlogPosts(contentData.posts as BlogPost[]);
+        setProjects(contentData.projects as Project[]);
         setTeamMembers(jsyaml.load(teamText) as TeamMember[]);
-        setProjects(jsyaml.load(projectsText) as Project[]);
-        
+
       } catch (e) {
         setError(e instanceof Error ? e.message : 'An unknown error occurred');
       } finally {
@@ -51,6 +58,26 @@ const App: React.FC = () => {
   }, []);
 
 
+  const handleNavigateToPage = (page: Page) => {
+    setActivePage(page);
+    setViewState({ type: 'page', page });
+    setSidebarOpen(false);
+  };
+
+  const handleNavigateToBlogPost = (slug: string) => {
+    setViewState({ type: 'blog-post', slug });
+    setSidebarOpen(false);
+  };
+
+  const handleNavigateToProject = (slug: string) => {
+    setViewState({ type: 'project', slug });
+    setSidebarOpen(false);
+  };
+
+  const handleBackToPage = () => {
+    setViewState({ type: 'page', page: activePage });
+  };
+
   const renderContent = () => {
     if (loading) {
       return <div className="text-center p-12">Loading content...</div>;
@@ -58,13 +85,30 @@ const App: React.FC = () => {
     if (error) {
       return <div className="text-center p-12 text-red-500">Error: {error}</div>;
     }
-    switch (activePage) {
+
+    if (viewState.type === 'blog-post') {
+      const post = blogPosts.find(p => p.slug === viewState.slug);
+      if (!post) {
+        return <div className="text-center p-12">Blog post not found</div>;
+      }
+      return <BlogPostPage post={post} onBack={handleBackToPage} />;
+    }
+
+    if (viewState.type === 'project') {
+      const project = projects.find(p => p.slug === viewState.slug);
+      if (!project) {
+        return <div className="text-center p-12">Project not found</div>;
+      }
+      return <ProjectPage project={project} onBack={handleBackToPage} />;
+    }
+
+    switch (viewState.page) {
       case 'about':
         return <AboutContent />;
       case 'projects':
-        return <ProjectsContent projects={projects} />;
+        return <ProjectsContent projects={projects} onProjectClick={handleNavigateToProject} />;
       case 'blog':
-        return <BlogContent posts={blogPosts} />;
+        return <BlogContent posts={blogPosts} onPostClick={handleNavigateToBlogPost} />;
       case 'team':
         return <TeamContent members={teamMembers} />;
       default:
@@ -78,7 +122,7 @@ const App: React.FC = () => {
       <div className="flex">
         <Sidebar 
           activePage={activePage} 
-          setActivePage={setActivePage} 
+          setActivePage={handleNavigateToPage} 
           isOpen={isSidebarOpen}
           setIsOpen={setSidebarOpen}
         />

@@ -11,6 +11,8 @@ export interface BlogPost {
   date: string;
   author: string;
   summary: string;
+  slug: string;
+  markdownFile: string;
 }
 
 export interface TeamMember {
@@ -27,4 +29,14 @@ export interface Project {
     description: string;
     focusAreas: string[];
     imageUrl: string;
+    slug: string;
+    markdownFile: string;
+    detailedDescription?: string;
+    vision?: string;
+    goal?: string;
+    deliverables?: string[];
+    scenarios?: Array<{ name: string; description: string }>;
+    partnerTieIn?: string;
+    stretch?: string;
+    collaborationOpportunities?: string[];
 }
