@@ -24,7 +24,7 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
           <div className="flex-1 overflow-hidden">
             <div className="animate-marquee whitespace-nowrap text-lg lg:text-xl text-white font-light" style={{ letterSpacing: '0.5em' }}>
               <span className="inline-block">{marqueeText}</span>
-              <span className="inline-block ml-32">{marqueeText}</span>
+              <span className="inline-block" style={{ marginLeft: '4rem' }}>{marqueeText}</span>
             </div>
           </div>
         </div>
