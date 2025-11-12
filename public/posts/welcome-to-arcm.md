@@ -1,6 +1,6 @@
 ---
 title: "Welcome to ARC Munich"
-date: "November 1, 2024"
+date: "November 1, 2025"
 author: "ARC Munich Team"
 summary: "Introducing the Alliance for Resilient Technology Munich - a community-driven initiative focused on dual-use technology development and innovation."
 slug: "welcome-to-arcm"
