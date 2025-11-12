@@ -6,7 +6,7 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
-  const marqueeText = "RESILIENCE REFERS TO THE CAPACITY TO RECOVER FROM DIFFICULTIES, ADAPT TO CHANGE, AND KEEP MOVING FORWARD DESPITE CHALLENGES. RESILIENCE REFERS TO THE CAPACITY TO RECOVER FROM DIFFICULTIES, ADAPT TO CHANGE, AND KEEP MOVING FORWARD DESPITE CHALLENGES. RESILIENCE REFERS TO THE CAPACITY TO RECOVER FROM DIFFICULTIES, ADAPT TO CHANGE, AND KEEP MOVING FORWARD DESPITE CHALLENGES.";
+  const marqueeText = "RESILIENCE REFERS TO THE CAPACITY TO RECOVER FROM DIFFICULTIES, ADAPT TO CHANGE, AND KEEP MOVING FORWARD DESPITE CHALLENGES.";
 
   return (
     <header className="fixed top-0 left-0 right-0 z-20 bg-black bg-opacity-80 backdrop-blur-sm border-b border-neutral-800">
@@ -23,8 +23,8 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
           {/* Animated Marquee Text */}
           <div className="flex-1 overflow-hidden">
             <div className="animate-marquee whitespace-nowrap text-lg lg:text-xl text-white font-light" style={{ letterSpacing: '0.5em' }}>
-              <span className="inline-block">{marqueeText}</span>
-              <span className="inline-block" style={{ marginLeft: '4rem' }}>{marqueeText}</span>
+              <span className="inline-block pr-16">{marqueeText}</span>
+              <span className="inline-block pr-16">{marqueeText}</span>
             </div>
           </div>
         </div>
