@@ -23,15 +23,6 @@ const AboutContent: React.FC = () => {
             <p className="mb-6 leading-relaxed">
               Our mission is to explore and prototype civilian and dual-use technical solutions inspired by critical technology themes, with strong ethics, openness, and industry collaboration. We position ourselves at the intersection of academic research, the deep-tech industry, and real-world challenges in technological resilience.
             </p>
-            <div className="flex items-center space-x-6 text-sm">
-              <a href="https://arc-munich.github.io" target="_blank" rel="noopener noreferrer" className="bg-neutral-800 text-white px-5 py-3 rounded-full hover:bg-neutral-700 transition-colors">
-                Our Mission
-              </a>
-              <a href="https://arc-munich.github.io" target="_blank" rel="noopener noreferrer" className="flex items-center group text-white">
-                Our Charter
-                <ArrowRightIcon className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
-              </a>
-            </div>
           </div>
           <div className="flex justify-center">
             <img 

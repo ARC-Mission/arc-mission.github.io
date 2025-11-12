@@ -26,7 +26,16 @@ const Sidebar: React.FC<SidebarProps> = ({ activePage, setActivePage, isOpen, se
       )}
       <aside className={`fixed top-0 left-0 z-40 w-64 h-screen bg-black transition-transform transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}>
         <div className="h-full px-3 py-4 overflow-y-auto">
-          <div className="pt-16 pl-2 space-y-2 text-sm">
+          {/* Logo */}
+          <div className="pt-20 pb-8 flex justify-center">
+            <img
+              src="/assets/logo_white.png"
+              alt="ARCM Logo"
+              className="w-32 h-32 object-contain"
+            />
+          </div>
+
+          <div className="pl-2 space-y-2 text-sm">
             <ul className="space-y-1">
               {NAV_LINKS.map((link) => (
                 <li key={link.id}>
