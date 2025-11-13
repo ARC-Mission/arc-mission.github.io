@@ -1,108 +1,147 @@
 # ARCM - Alliance for Resilient Computing Munich
 
-A website for the Alliance for Resilient Computing Munich, built with React, TypeScript, and Vite.
+Official website for the Alliance for Resilient Computing Munich, built with Jekyll.
 
-## Local Development
+## Development Setup
 
 ### Prerequisites
-- Node.js (v18 or higher recommended)
-- npm
 
-### Setup and Running Locally
+- Ruby (version 3.0 or higher)
+- Bundler (`gem install bundler`)
+
+### Local Development
 
 1. **Install dependencies:**
    ```bash
-   npm install
+   bundle install
    ```
 
-2. **Start the development server:**
+2. **Build the site:**
    ```bash
-   npm run dev
+   bundle exec jekyll build
    ```
 
-3. **Open your browser:**
-   Navigate to http://localhost:3000
+3. **Serve the site locally:**
+   ```bash
+   bundle exec jekyll serve
+   ```
 
-### Building for Production
+   The site will be available at `http://localhost:4000`
 
-To build the site for production:
+## Site Structure
 
-```bash
-npm run build
+```
+├── _config.yml           # Jekyll configuration
+├── _layouts/             # Page layouts
+│   ├── default.html      # Base layout with header/sidebar
+│   ├── post.html         # Blog post layout
+│   └── project.html      # Project page layout
+├── _includes/            # Reusable components
+│   ├── header.html       # Top navigation with marquee
+│   └── sidebar.html      # Side navigation
+├── _posts/               # Blog posts (YYYY-MM-DD-title.md)
+├── _projects/            # Project pages
+├── _data/                # Data files
+│   └── team.yaml         # Team member information
+├── assets/               # Static assets
+│   ├── css/              # Stylesheets
+│   ├── logo_white.png    # Logo
+│   └── projects/         # Project images
+├── index.html            # Homepage (About Us)
+├── blog.html             # Blog listing page
+├── projects.html         # Projects listing page
+└── team.html             # Team page
 ```
 
-The built files will be in the `dist` directory.
+## Adding Content
 
-### Preview Production Build
+### Creating a New Blog Post
 
-To preview the production build locally:
+Create a new markdown file in `_posts/` with the filename format: `YYYY-MM-DD-title.md`
 
-```bash
-npm run preview
+Example: `_posts/2025-11-15-new-post.md`
+
+```markdown
+---
+layout: post
+title: "Your Post Title"
+date: 2025-11-15
+author: "Author Name"
+summary: "Brief summary of the post"
+---
+
+Your post content here in markdown...
 ```
 
-## Deployment to GitHub Pages
+### Creating a New Project
 
-This site uses GitHub Actions for automatic deployment. Every push to the `main` branch will automatically build and deploy the site.
+Create a new markdown file in `_projects/` with any filename (e.g., `my-project.md`)
 
-### First-time Setup
+```markdown
+---
+layout: project
+title: "Your Project Title"
+status: "Active"  # Options: Active, Proposed, Completed
+description: "Brief project description"
+slug: "my-project"
+cover: "/assets/projects/image.jpg"
+focusAreas:
+  - "Area 1"
+  - "Area 2"
+---
 
-1. Go to your repository on GitHub
-2. Navigate to **Settings** → **Pages**
-3. Under "Build and deployment":
-   - Source: Select **GitHub Actions**
-4. Push your code to the `main` branch
+Your project content here in markdown...
+```
 
-The GitHub Action will automatically:
-- Install dependencies
-- Build the project
-- Deploy to GitHub Pages
+### Updating Team Members
 
-### Manual Deployment (if needed)
+Edit `_data/team.yaml`:
 
-If you need to deploy manually without GitHub Actions:
+```yaml
+- id: 1
+  name: "Member Name"
+  role: "Role Title"
+  imageUrl: "/assets/team/photo.jpg"
+```
 
-1. Build the project:
-   ```bash
-   npm run build
-   ```
+## Deployment
 
-2. The `dist` folder contains the static files that can be deployed to any static hosting service.
+This site is configured for GitHub Pages. Simply push to the `main` branch and GitHub will automatically build and deploy the site.
 
-## Project Structure
+### Manual Deployment
 
-- `App.tsx` - Main application component
-- `components/` - React components
-  - `ProjectsContent.tsx` - Enhanced project display with modal details
-  - `BlogContent.tsx` - Blog posts display
-  - `TeamContent.tsx` - Team members display
-  - `AboutContent.tsx` - About page content
-  - `Header.tsx` - Site header
-  - `Sidebar.tsx` - Navigation sidebar
-- `public/` - Static assets served at the root
-  - `data/` - YAML data files for blog posts, team members, and projects
-  - `assets/projects/` - Project placeholder images
-  - `.nojekyll` - Disables Jekyll processing on GitHub Pages
-- `types.ts` - TypeScript type definitions
-- `constants.ts` - Application constants
+To deploy manually:
 
-## Projects
+1. Build the site: `bundle exec jekyll build`
+2. The static site will be in `_site/`
+3. Deploy the `_site/` directory to your hosting provider
 
-The site features detailed project pages with:
-- Project descriptions and goals
-- Benchmark scenarios (for multi-scenario projects)
-- Deliverables and milestones
-- Collaboration opportunities
-- Partner tie-ins and stretch goals
+## Styling
 
-Click on any project card to view the full details in an interactive modal.
+The site uses Tailwind CSS via CDN for styling. All styles are configured in `_layouts/default.html`.
 
-### Current Projects
+The dark theme is applied globally with custom typography settings optimized for technical content.
+
+## URL Structure
+
+- Homepage (About): `/`
+- Blog listing: `/blog/`
+- Individual blog posts: `/blog/YYYY/MM/DD/title/`
+- Projects listing: `/projects/`
+- Individual projects: `/projects/slug/`
+- Team: `/team/`
+
+## Features
+
+- Responsive design with mobile-friendly navigation
+- Syntax highlighting for code blocks
+- Markdown support with GFM (GitHub Flavored Markdown)
+- Automatic blog post and project listing generation
+- SEO-friendly URLs
+- Fast loading with static site generation
+
+## Current Projects
 
 1. **Isaac Sim Dual-Use Benchmark Suite** - Standardized benchmarks for autonomous systems
 2. **Sim-to-Real Drone Surveillance Pipeline** - Training drones for extreme environments
 3. **Robotic Arm for Medical Logistics** - Automated field-aid setup
-
-### Adding New Projects
-
-Edit `public/data/projects.yaml` and add project images to `public/assets/projects/`.

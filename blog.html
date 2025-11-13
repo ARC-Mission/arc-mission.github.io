@@ -1,0 +1,29 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+
+<div class="container mx-auto px-4 sm:px-6 lg:px-12 py-12">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-5xl md:text-7xl font-medium text-white mb-12">Blog</h1>
+    <div class="space-y-12">
+      {% for post in site.posts %}
+      <div class="group">
+        <p class="text-sm text-neutral-400 mb-1">{{ post.date | date: "%B %-d, %Y" }} &bull; {{ post.author }}</p>
+        <h2 class="text-2xl font-medium text-white mb-2">{{ post.title }}</h2>
+        <p class="text-neutral-300 mb-4 leading-relaxed">{{ post.summary }}</p>
+        <a
+          href="{{ post.url }}"
+          class="inline-flex items-center text-white font-medium group-hover:text-blue-400 transition-colors"
+        >
+          Read more
+          <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

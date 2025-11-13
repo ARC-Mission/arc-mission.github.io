@@ -1,0 +1,62 @@
+# Site settings
+title: "ARCM - Alliance for Resilient Computing Munich"
+description: "Alliance for Resilient Computing Munich - a community-driven initiative focused on dual-use technology development and innovation."
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://arc-munich.github.io" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:slug/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: /blog/:year/:month/:day/:title/
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Exclude from processing
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - vite.config.ts
+  - tsconfig.json
+  - tailwind.config.js
+  - README.md
+  - CONTENT_GUIDE.md
+  - App.tsx
+  - index.tsx
+  - components
+  - src
+  - scripts
+  - types.ts
+  - constants.ts
+  - dist
+  - metadata.json
+  - public/data/content-index.json
+
+# Include
+include:
+  - _pages

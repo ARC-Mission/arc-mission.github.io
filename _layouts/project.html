@@ -1,0 +1,73 @@
+---
+layout: default
+---
+
+{% assign status_class = '' %}
+{% if page.status == 'Active' %}
+  {% assign status_class = 'bg-green-900/50 text-green-300 border-green-700/50' %}
+{% elsif page.status == 'Proposed' %}
+  {% assign status_class = 'bg-yellow-900/50 text-yellow-300 border-yellow-700/50' %}
+{% elsif page.status == 'Completed' %}
+  {% assign status_class = 'bg-blue-900/50 text-blue-300 border-blue-700/50' %}
+{% else %}
+  {% assign status_class = 'bg-neutral-700 text-neutral-300' %}
+{% endif %}
+
+<div class="container mx-auto px-4 sm:px-6 lg:px-12 py-12">
+  <a href="/projects/" class="mb-6 text-neutral-400 hover:text-white flex items-center transition-colors">
+    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+    </svg>
+    Back to Projects
+  </a>
+
+  <article class="max-w-3xl mx-auto">
+    {% if page.cover %}
+    <div class="relative mb-8">
+      <img
+        src="{{ page.cover }}"
+        alt="{{ page.title }}"
+        class="w-full h-80 object-cover rounded-lg"
+      />
+    </div>
+    {% endif %}
+
+    <header class="mb-8">
+      <div class="flex flex-wrap items-center gap-4 mb-4">
+        <h1 class="text-5xl md:text-6xl font-medium text-white">{{ page.title }}</h1>
+        <span class="text-sm font-mono px-3 py-1 rounded-full border {{ status_class }}">
+          {{ page.status }}
+        </span>
+      </div>
+
+      {% if page.focusAreas %}
+      <div class="flex flex-wrap gap-2 mb-6">
+        {% for area in page.focusAreas %}
+        <span class="text-sm bg-neutral-800 text-neutral-300 px-3 py-1 rounded">
+          {{ area }}
+        </span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </header>
+
+    <div class="prose prose-invert prose-lg max-w-none">
+      {{ content }}
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-neutral-800">
+      <h3 class="text-2xl font-medium text-white mb-4">Interested in Contributing?</h3>
+      <p class="text-neutral-300 mb-6">
+        We're always looking for collaborators to help bring this project to life.
+        Whether you're interested in development, testing, documentation, or partnerships,
+        we'd love to hear from you.
+      </p>
+      <a
+        href="/projects/"
+        class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded transition-colors font-medium"
+      >
+        Back to Projects
+      </a>
+    </div>
+  </article>
+</div>
