@@ -62,9 +62,9 @@
   </head>
   <body class="bg-black text-neutral-300 min-h-screen font-light">
     {% include header.html %}
-    <div class="flex">
+    <div class="flex min-h-screen">
       {% include sidebar.html %}
-      <main class="flex-1 transition-all duration-300 lg:ml-64 pt-16">
+      <main class="flex-1 w-full transition-all duration-300 lg:ml-64 pt-16">
         {{ content }}
       </main>
     </div>
