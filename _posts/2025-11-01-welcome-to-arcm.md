@@ -1,17 +1,17 @@
 ---
-title: "Welcome to ARC Munich"
+title: "Welcome to ARC-M"
 date: "November 1, 2025"
-author: "ARC Munich Team"
-summary: "Introducing the Alliance for Resilient Computing Munich - a community-driven initiative focused on dual-use technology development and innovation."
+author: "ARC-M Team"
+summary: "Introducing the Advanced Resilience & Computing Mission - a community-driven initiative focused on dual-use technology development and innovation."
 slug: "welcome-to-arcm"
 cover: "/assets/blog/welcome-cover.jpg"
 ---
 
-We're excited to announce the launch of the Alliance for Resilient Computing Munich (ARC Munich), a community-driven initiative focused on dual-use technology development and innovation.
+We're excited to announce the launch of the Advanced Resilience & Computing Mission (ARC-M), a community-driven initiative focused on dual-use technology development and innovation.
 
 ## Our Mission
 
-ARC Munich brings together researchers, engineers, and technologists interested in developing cutting-edge solutions that serve both civilian and defense applications. We believe in:
+ARC-M brings together researchers, engineers, and technologists interested in developing cutting-edge solutions that serve both civilian and defense applications. We believe in:
 
 - **Open Collaboration**: Building technology in the open, with the community
 - **Practical Impact**: Focusing on projects that can make a real difference
@@ -66,7 +66,7 @@ Interested in joining us? Here's how you can contribute:
 
 This is just the beginning. We're building something sustainable and impactful - a community that pushes the boundaries of what's possible in dual-use technology.
 
-Whether you're interested in AI, robotics, simulation, or any related field, ARC Munich offers a platform to work on meaningful projects with talented collaborators.
+Whether you're interested in AI, robotics, simulation, or any related field, ARC-M offers a platform to work on meaningful projects with talented collaborators.
 
 Welcome aboard!
 

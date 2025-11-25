@@ -1,6 +1,6 @@
 # Site settings
-title: "ARCM - Alliance for Resilient Computing Munich"
-description: "Alliance for Resilient Computing Munich - a community-driven initiative focused on dual-use technology development and innovation."
+title: "ARC-M - Advanced Resilience & Computing Mission"
+description: "Advanced Resilience & Computing Mission - a community-driven initiative focused on dual-use technology development and innovation."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://arc-munich.github.io" # the base hostname & protocol for your site
 

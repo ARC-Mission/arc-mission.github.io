@@ -1,6 +1,6 @@
-# ARCM - Alliance for Resilient Computing Munich
+# ARC-M - Advanced Resilience & Computing Mission
 
-Official website for the Alliance for Resilient Computing Munich, built with Jekyll.
+Official website for the Advanced Resilience & Computing Mission, built with Jekyll.
 
 ## Development Setup
 
