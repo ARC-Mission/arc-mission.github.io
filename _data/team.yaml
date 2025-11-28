@@ -1,4 +1,19 @@
 - id: 1
-  name: ''
-  role: 'President & Co-Founder'
-  imageUrl: ''
+  name: 'Yll Kryeziu'
+  role: 'Co-Founder'
+  imageUrl: 'https://media.licdn.com/dms/image/v2/D4D03AQEXgsLEAB_CEQ/profile-displayphoto-shrink_800_800/B4DZcTX63hIAAc-/0/1748376731951?e=1766016000&v=beta&t=FN2Zfa9_TpMSVfkSKN-OITlTmt-yfwZefrb-r7RyakQ'
+
+- id: 2
+  name: 'Tobias Inzinger'
+  role: 'Co-Founder'
+  imageUrl: 'https://media.licdn.com/dms/image/v2/D4D03AQHDwdjqbw0RRw/profile-displayphoto-shrink_800_800/B4DZbI9npdHQAc-/0/1747128319077?e=1766016000&v=beta&t=ScLw2cgeGzn7_yrn92-joAiE313E47TIpTvC6B21bas'
+
+- id: 3
+  name: 'Keihan Pakseresht'
+  role: 'Co-Founder'
+  imageUrl: 'https://media.licdn.com/dms/image/v2/D5603AQGLnjGuTq3xDA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1713853178848?e=1766016000&v=beta&t=VMlMvLx9e7-yHwBNgdsKMphyGLjjJ6zU3aqbXGn48u8'
+
+- id: 4
+  name: 'Elias Limmer'
+  role: 'Co-Founder'
+  imageUrl: 'https://media.licdn.com/dms/image/v2/D4E03AQFoCgszHJLLnQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1669727014988?e=1766016000&v=beta&t=VaETMX-nfjMmAvMX-OabLzgKjCPfJWGf5ib15-UcUgw'
