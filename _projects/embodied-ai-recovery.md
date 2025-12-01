@@ -64,13 +64,13 @@ We are actively looking for contributors for:
 
 ## References
 
-<span id="ref-1">1.</span> [Magistral: Europe's First Open Reasoning Model](https://mistral.ai/news/mistral-large-reasoning-and-magistral/) (2025). Mistral AI Engineering Blog.
+<span id="ref-1">1.</span> Magistral: Europe's First Open Reasoning Model. (2025). Mistral AI Engineering Blog.
 
 <span id="ref-2">2.</span> Chain-of-Thought Reasoning in Embodied Agents. (2025). Proceedings of the IEEE International Conference on Robotics and Automation (ICRA).
 
-<span id="ref-3">3.</span> [Isaac Lab: A Modular Framework for Robot Learning in Isaac Sim](https://arxiv.org/abs/2405.14734) (2024). NVIDIA arXiv.
+<span id="ref-3">3.</span> Isaac Lab: A Modular Framework for Robot Learning in Isaac Sim. (2024). NVIDIA arXiv.
 
-<span id="ref-4">4.</span> [Eureka: Human-Level Reward Design via Coding Large Language Models](https://eureka-research.github.io/) (2024). Ma et al.
+<span id="ref-4">4.</span> Eureka: Human-Level Reward Design via Coding Large Language Models. (2024). Ma et al.
 
 ## Get Involved
 
