@@ -12,7 +12,8 @@ permalink: /projects/
       Click on any project to learn more and discover collaboration opportunities.
     </p>
     <div class="grid md:grid-cols-2 gap-8">
-      {% for project in site.projects %}
+      {% assign sorted_projects = site.projects | sort: 'order' %}
+      {% for project in sorted_projects %}
       {% assign status_class = '' %}
       {% if project.status == 'Active' %}
         {% assign status_class = 'bg-green-900/50 text-green-300 border-green-700/50' %}

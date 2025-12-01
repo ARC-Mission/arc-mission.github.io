@@ -4,6 +4,7 @@ status: "Proposed"
 description: "Using robotic manipulator with vision system to automate setup of first-aid modules in field environments. Training object pose estimation and control in Isaac Sim."
 slug: "robotic-arm-medical"
 cover: "/assets/projects/robotic_arm.jpg"
+order: 4
 focusAreas:
   - "Robotics"
   - "Computer Vision"

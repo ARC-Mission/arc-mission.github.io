@@ -4,6 +4,7 @@ status: "Active"
 description: "The flagship ARC-M project: Engineering an Embodied AI agent that uses Reasoning LLMs (Magistral) to supervise RL training in Isaac Sim, enabling autonomous recovery in unstructured environments."
 slug: "embodied-ai-recovery"
 cover: "/assets/projects/embodied_recovery.jpg"
+order: 1
 focusAreas:
   - "Embodied AI"
   - "Reasoning LLMs"
@@ -30,7 +31,7 @@ By combining them, we solve the **"Sparse Reward Problem"**: The Reasoning LLM d
 ## Technical Approach
 
 ### 1. Simulation Framework: Isaac Lab
-We utilize **NVIDIA Isaac Lab** (built on Isaac Sim) to parallelize training. We spawn 4,096 robot instances simultaneously on a single GPU. This allows our agent to experience years of "getting stuck" and "recovering" in just a few hours of wall-clock time [1].
+We utilize **NVIDIA Isaac Lab** (built on Isaac Sim) to parallelize training. We spawn 4,096 robot instances simultaneously on a single GPU. This allows our agent to experience years of "getting stuck" and "recovering" in just a few hours of wall-clock time [[1](#ref-1)].
 
 ### 2. The Learning Pipeline (The "Eureka" Moment)
 We implement an LLM-guided Reward Design approach (similar to NVIDIA's Eureka research):
@@ -62,9 +63,11 @@ We are actively looking for contributors for:
 
 ## References
 
-1.  [Isaac Lab: A Modular Framework for Robot Learning in Isaac Sim](https://arxiv.org/abs/2405.14734) (2024). NVIDIA arXiv.
-2.  [Eureka: Human-Level Reward Design via Coding Large Language Models](https://eureka-research.github.io/) (2024). Ma et al.
-3.  [Magistral: Europe's First Open Reasoning Model](https://mistral.ai/news/mistral-large-reasoning-and-magistral/) (2025). Mistral AI Engineering Blog.
+<span id="ref-1">1.</span> [Isaac Lab: A Modular Framework for Robot Learning in Isaac Sim](https://arxiv.org/abs/2405.14734) (2024). NVIDIA arXiv.
+
+<span id="ref-2">2.</span> [Eureka: Human-Level Reward Design via Coding Large Language Models](https://eureka-research.github.io/) (2024). Ma et al.
+
+<span id="ref-3">3.</span> [Magistral: Europe's First Open Reasoning Model](https://mistral.ai/news/mistral-large-reasoning-and-magistral/) (2025). Mistral AI Engineering Blog.
 
 ## Get Involved
 
