@@ -1,6 +1,6 @@
 ---
 title: "Isaac Sim Dual-Use Benchmark Suite"
-status: "Active"
+status: "Proposed"
 description: "Creating standardized Isaac Sim benchmarks for dual-use scenarios to establish leadership in evaluation methodology for autonomous systems."
 slug: "isaac-sim-benchmark"
 cover: "/assets/projects/isaac_sim.jpg"

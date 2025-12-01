@@ -1,6 +1,6 @@
 ---
 title: "Sim-to-Real Drone Surveillance Pipeline"
-status: "Active"
+status: "Proposed"
 description: "Building a simulation environment in Isaac to train drone perception and navigation in extreme conditions, then transferring to real hardware for hazard identification."
 slug: "drone-surveillance"
 cover: "/assets/projects/drone_sim.jpg"

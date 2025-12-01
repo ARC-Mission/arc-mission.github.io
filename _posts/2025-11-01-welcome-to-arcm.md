@@ -1,6 +1,6 @@
 ---
 title: "Welcome to ARC-M"
-date: "November 1, 2025"
+date: "August 1, 2025"
 author: "ARC-M Team"
 summary: "Introducing the Advanced Resilience & Computing Mission - a community-driven initiative focused on dual-use technology development and innovation."
 slug: "welcome-to-arcm"
@@ -42,16 +42,6 @@ We're not just another research group. We're building a community that:
 2. **Seeks Partnerships**: We actively collaborate with companies, universities, and government organizations
 3. **Values Practicality**: Every project has clear deliverables and real-world applications
 4. **Welcomes Contributors**: Whether you're a student or a seasoned professional, there's a place for you
-
-## Current Projects
-
-We're currently working on three exciting projects:
-
-1. **Isaac Sim Benchmark Suite**: Standardized benchmarks for evaluating autonomous systems in dual-use scenarios
-2. **Drone Surveillance Pipeline**: Sim-to-real transfer for drone perception in extreme conditions
-3. **Robotic Arm for Medical Logistics**: Automated setup of field medical kits using computer vision
-
-Each project has opportunities for collaboration at all levels.
 
 ## Get Involved
 
