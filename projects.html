@@ -16,20 +16,23 @@ permalink: /projects/
       {% for project in sorted_projects %}
       {% assign status_class = '' %}
       {% if project.status == 'Active' %}
-        {% assign status_class = 'bg-green-900/50 text-green-300 border-green-700/50' %}
+      {% assign status_class = 'bg-green-900/50 text-green-300 border-green-700/50' %}
       {% elsif project.status == 'Proposed' %}
-        {% assign status_class = 'bg-yellow-900/50 text-yellow-300 border-yellow-700/50' %}
+      {% assign status_class = 'bg-yellow-900/50 text-yellow-300 border-yellow-700/50' %}
       {% elsif project.status == 'Completed' %}
-        {% assign status_class = 'bg-blue-900/50 text-blue-300 border-blue-700/50' %}
+      {% assign status_class = 'bg-blue-900/50 text-blue-300 border-blue-700/50' %}
       {% else %}
-        {% assign status_class = 'bg-neutral-700 text-neutral-300' %}
+      {% assign status_class = 'bg-neutral-700 text-neutral-300' %}
       {% endif %}
 
-      <a
-        href="{{ project.url }}"
-        class="bg-neutral-900/50 border border-neutral-800 rounded-lg flex flex-col group transition-all hover:border-neutral-700 hover:bg-neutral-900 overflow-hidden cursor-pointer"
-      >
+      <a href="{{ project.url }}"
+        class="bg-neutral-900/50 border border-neutral-800 rounded-lg flex flex-col group transition-all hover:border-neutral-700 hover:bg-neutral-900 overflow-hidden cursor-pointer">
+        {% if project.video %}
+        <video src="{{ project.video }}" {% if project.cover %}poster="{{ project.cover }}" {% endif %} autoplay loop
+          muted playsinline class="w-full h-48 object-cover"></video>
+        {% else %}
         <img src="{{ project.cover }}" alt="Illustration for {{ project.title }}" class="w-full h-48 object-cover" />
+        {% endif %}
         <div class="p-6 flex flex-col flex-grow">
           <div class="flex justify-between items-start mb-3 gap-4">
             <h2 class="text-xl font-medium text-white">{{ project.title }}</h2>
@@ -48,9 +51,11 @@ permalink: /projects/
               {% endfor %}
             </div>
           </div>
-          <span class="inline-flex items-center text-white font-medium self-start mt-auto group-hover:text-blue-400 transition-colors">
+          <span
+            class="inline-flex items-center text-white font-medium self-start mt-auto group-hover:text-blue-400 transition-colors">
             Learn more
-            <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </span>
