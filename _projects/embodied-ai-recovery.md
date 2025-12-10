@@ -4,6 +4,7 @@ status: "Active"
 description: "The flagship ARC-M project: Engineering an Embodied AI agent that uses Reasoning LLMs (Magistral) to supervise RL training in Isaac Sim, enabling autonomous recovery in unstructured environments."
 slug: "embodied-ai-recovery"
 cover: "/assets/projects/embodied_recovery.jpg"
+video: "/assets/projects/arise.mp4"
 order: 1
 focusAreas:
   - "Embodied AI"

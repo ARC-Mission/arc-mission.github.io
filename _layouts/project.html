@@ -22,7 +22,19 @@ layout: default
   </a>
 
   <article class="max-w-3xl mx-auto">
-    {% if page.cover %}
+    {% if page.video %}
+    <div class="relative mb-8">
+      <video
+        src="{{ page.video }}"
+        {% if page.cover %}poster="{{ page.cover }}"{% endif %}
+        autoplay
+        loop
+        muted
+        playsinline
+        class="w-full h-80 object-cover rounded-lg"
+      ></video>
+    </div>
+    {% elsif page.cover %}
     <div class="relative mb-8">
       <img
         src="{{ page.cover }}"
