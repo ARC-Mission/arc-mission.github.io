@@ -53,7 +53,7 @@ exclude:
   - scripts
   - types.ts
   - constants.ts
-  - dist
+  - dist/
   - metadata.json
   - public/data/content-index.json
 

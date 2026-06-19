@@ -8,51 +8,87 @@ title: About Us
 
     <!-- Intro Section -->
     <div class="text-center mb-24">
-      <p class="text-sm text-neutral-400 tracking-wider mb-4">Organization</p>
-      <h1 class="text-5xl md:text-7xl font-medium text-white mb-6">About ARC-M</h1>
+      <p class="text-sm text-neutral-400 tracking-wider mb-4">Advanced Resilience &amp; Computing Mission</p>
+      <h1 class="text-5xl md:text-7xl font-medium text-white mb-6">Machines that never stop learning.</h1>
       <p class="text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-        The Advanced Resilience & Computing Mission (ARC-M) is a student organization at TUM dedicated to exploring and developing civilian and dual-use technological solutions to benefit all of humanity.
+        ARC-M is a research initiative at TUM building a new architecture for continual learning: <strong class="text-white font-medium">finite-sized state models</strong> that keep learning from experience after deployment, online and in the loop — built for the data that doesn't exist yet, but is being generated every second.
       </p>
     </div>
 
-    <!-- Vision Section -->
+    <!-- The bet -->
     <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
       <div class="max-w-md">
-        <h2 class="text-4xl font-medium text-white mb-6">Our Vision for Resilient Technology</h2>
+        <h2 class="text-4xl font-medium text-white mb-6">The transformer ate the internet.</h2>
         <p class="mb-6 leading-relaxed">
-          Our mission is to explore and prototype civilian and dual-use technical solutions inspired by critical technology themes, with strong ethics, openness, and industry collaboration. We position ourselves at the intersection of academic research, the deep-tech industry, and real-world challenges in technological resilience.
+          The best models are now trained on essentially all the high-quality text that exists. Scaling needs more data, not just more compute — and the stock of human text is running out this decade. The frontier is squeezing the last few percent out of a saturated architecture.
+        </p>
+        <p class="leading-relaxed">
+          The next frontier isn't more internet. It's the <strong class="text-white font-medium">embodied, operational stream</strong> — every robot on a line, every agent doing a task, generating millions of data points a day. Almost none of it is captured: a frozen, context-bounded model throws it away the moment it happens. The bottleneck is architecture, not supply.
         </p>
       </div>
       <div class="flex justify-center">
         <img
           src="/assets/logo_white.png"
-          alt="ARC-M Logo - A vision of resilient systems"
+          alt="ARC-M Logo"
           class="w-full max-w-md"
         />
       </div>
     </div>
 
-    <!-- Focus Areas Section -->
+    <!-- Core Ideas -->
     <div class="mb-24">
-      <h2 class="text-4xl font-medium text-white mb-8 text-center">A Focus on Critical Technology Areas</h2>
-      <p class="text-center max-w-3xl mx-auto mb-10">The inspiration for our projects is drawn from key areas of technological advancement that are crucial for societal resilience. These domains serve as prompts for research and prototyping.</p>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center text-sm">
-        <div class="p-4 bg-neutral-900 border border-neutral-800 rounded-lg">Energy and Power</div>
-        <div class="p-4 bg-neutral-900 border border-neutral-800 rounded-lg">Advanced Communication</div>
-        <div class="p-4 bg-neutral-900 border border-neutral-800 rounded-lg">Human Resilience</div>
-        <div class="p-4 bg-neutral-900 border border-neutral-800 rounded-lg">Critical Infrastructure</div>
-        <div class="p-4 bg-neutral-900 border border-neutral-800 rounded-lg">Extreme Environments</div>
-        <div class="p-4 bg-neutral-900 border border-neutral-800 rounded-lg">Resilient Space Operations</div>
-        <div class="p-4 bg-neutral-900 border border-neutral-800 rounded-lg">Maritime Operations</div>
-        <div class="p-4 bg-neutral-900 border border-neutral-800 rounded-lg">Autonomy & Unmanned Systems</div>
-        <div class="p-4 bg-neutral-900 border border-neutral-800 rounded-lg">Data-Assisted Decision Making</div>
+      <h2 class="text-4xl font-medium text-white mb-8 text-center">Our bet: finite-sized state models</h2>
+      <p class="text-center max-w-3xl mx-auto mb-10">A genuinely new architecture, not a transformer with memory bolted on. The model <em>is</em> the learning system. These are the principles we build around.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+        <div class="p-5 bg-neutral-900 border border-neutral-800 rounded-lg">
+          <h3 class="text-white font-medium mb-2">Finite state</h3>
+          <p class="text-neutral-400 leading-relaxed">A bounded internal state, not an ever-growing context window. Cost stays constant as experience accumulates.</p>
+        </div>
+        <div class="p-5 bg-neutral-900 border border-neutral-800 rounded-lg">
+          <h3 class="text-white font-medium mb-2">Continual learning</h3>
+          <p class="text-neutral-400 leading-relaxed">The state updates from experience, in the loop and online — the forward pass becomes a learning step.</p>
+        </div>
+        <div class="p-5 bg-neutral-900 border border-neutral-800 rounded-lg">
+          <h3 class="text-white font-medium mb-2">No catastrophic forgetting</h3>
+          <p class="text-neutral-400 leading-relaxed">Retaining old skills while acquiring new ones — the unsolved core the architecture is built to address.</p>
+        </div>
+        <div class="p-5 bg-neutral-900 border border-neutral-800 rounded-lg">
+          <h3 class="text-white font-medium mb-2">Data that compounds</h3>
+          <p class="text-neutral-400 leading-relaxed">Every robot, every shift, every correction makes the system better. Data compounds instead of resetting to zero.</p>
+        </div>
+        <div class="p-5 bg-neutral-900 border border-neutral-800 rounded-lg">
+          <h3 class="text-white font-medium mb-2">Embodied stream</h3>
+          <p class="text-neutral-400 leading-relaxed">Learning from the operational data frozen models can't reach, rather than from a static archive of the past.</p>
+        </div>
+        <div class="p-5 bg-neutral-900 border border-neutral-800 rounded-lg">
+          <h3 class="text-white font-medium mb-2">Falsifiable first</h3>
+          <p class="text-neutral-400 leading-relaxed">A bounded-compute benchmark that beats long-context and periodic-fine-tuning baselines. Concrete and fast to test.</p>
+        </div>
       </div>
+    </div>
+
+    <!-- Why now -->
+    <div class="mb-24">
+      <h2 class="text-4xl font-medium text-white mb-8 text-center">Why now</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="p-6 bg-neutral-900 border border-neutral-800 rounded-lg">
+          <p class="text-sm text-neutral-500 mb-2">The data wall</p>
+          <p class="leading-relaxed">Transformer scaling is visibly saturating, and the field is openly debating it. The old paradigm is exhausting its only fuel.</p>
+        </div>
+        <div class="p-6 bg-neutral-900 border border-neutral-800 rounded-lg">
+          <p class="text-sm text-neutral-500 mb-2">Embodied capability</p>
+          <p class="leading-relaxed">Robots and agents finally do enough real work to generate the stream. The new data source just came online.</p>
+        </div>
+      </div>
+      <p class="text-center text-neutral-400 mt-8 max-w-2xl mx-auto">
+        Read the argument in full: <a href="/blog/2026/06/10/the-data-wall/" class="text-blue-400 hover:text-blue-300">The Data Wall</a> and <a href="/blog/2026/06/18/finite-state-continual-learning/" class="text-blue-400 hover:text-blue-300">Finite-State Models for Continual Learning</a>.
+      </p>
     </div>
 
     <!-- Closing Statement -->
     <div class="text-center">
       <p class="text-3xl md:text-4xl text-white leading-snug max-w-4xl mx-auto">
-        We are building a unique space for students to engage with pressing challenges in emerging technology, while maintaining a steadfast commitment to civilian applications and ethical considerations.
+        The architecture every robot and agent ships with once the transformer era ends. We're a research initiative betting on what comes next — and building the benchmark to prove it.
       </p>
     </div>
   </div>

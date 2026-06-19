@@ -1,0 +1,158 @@
+---
+layout: default
+---
+
+<style>
+  /* ── Distill-inspired article, tuned to the ARC-M dark palette ───────────── */
+  .distill {
+    --rule: #262626;          /* neutral-800 */
+    --muted: #737373;         /* neutral-500 */
+    --text: #a3a3a3;          /* neutral-400 */
+    --accent: #60a5fa;        /* blue-400  */
+  }
+
+  .distill .byline {
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .distill .byline dt {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.35rem;
+  }
+  .distill .byline dd { color: #e5e5e5; font-size: 0.9rem; line-height: 1.4; }
+
+  /* Abstract */
+  .distill .abstract p { color: #d4d4d4; font-size: 1.05rem; line-height: 1.7; }
+
+  /* Inline citations: superscript bracketed numbers */
+  .distill a.cite {
+    color: var(--accent);
+    font-size: 0.7em;
+    vertical-align: super;
+    line-height: 0;
+    font-weight: 500;
+    padding: 0 0.05em;
+    text-decoration: none;
+  }
+  .distill a.cite::before { content: "["; }
+  .distill a.cite::after { content: "]"; }
+
+  /* Figures / captions */
+  .distill figure { margin: 2rem 0; }
+  .distill figcaption {
+    font-size: 0.8rem;
+    color: var(--muted);
+    line-height: 1.5;
+    margin-top: 0.6rem;
+    border-left: 2px solid var(--rule);
+    padding-left: 0.75rem;
+  }
+
+  /* Key-takeaway / aside callout (inline by default) */
+  .distill aside.margin-note {
+    display: block;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--text);
+    border-left: 2px solid #404040;
+    padding-left: 0.9rem;
+    margin: 1.25rem 0;
+  }
+  .distill aside.margin-note .mn-label {
+    display: block;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.3rem;
+  }
+
+  /* On very wide screens, float notes into the right margin (Tufte/distill style) */
+  @media (min-width: 1536px) {
+    .distill aside.margin-note {
+      float: right;
+      clear: right;
+      width: 200px;
+      margin-right: -232px;
+      margin-top: 0;
+      border-left: none;
+      padding-left: 0;
+    }
+  }
+
+  /* References: hanging indent, monospace markers */
+  .distill .references ol {
+    list-style: none;
+    padding-left: 0;
+    counter-reset: ref;
+  }
+  .distill .references li {
+    counter-increment: ref;
+    position: relative;
+    padding-left: 2.25rem;
+    margin-bottom: 0.85rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--text);
+  }
+  .distill .references li::before {
+    content: "[" counter(ref) "]";
+    position: absolute;
+    left: 0;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    color: var(--muted);
+    font-size: 0.78rem;
+  }
+  .distill .references li:target { color: #e5e5e5; }
+  .distill .references li:target::before { color: var(--accent); }
+</style>
+
+<div class="distill container mx-auto px-4 sm:px-6 lg:px-12 py-12">
+  <a href="/blog/" class="mb-8 text-neutral-400 hover:text-white inline-flex items-center transition-colors">
+    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+    </svg>
+    Back to Blog
+  </a>
+
+  <article class="max-w-3xl mx-auto">
+    <header class="mb-10">
+      {% if page.eyebrow %}
+      <p class="text-sm text-neutral-400 tracking-wider mb-4">{{ page.eyebrow }}</p>
+      {% endif %}
+      <h1 class="text-4xl md:text-6xl font-medium text-white leading-tight mb-4">{{ page.title }}</h1>
+      {% if page.subtitle %}
+      <p class="text-xl text-neutral-400 leading-relaxed mb-8">{{ page.subtitle }}</p>
+      {% endif %}
+
+      <dl class="byline grid grid-cols-2 md:grid-cols-3 gap-6 py-5 mt-2">
+        <div>
+          <dt>Author</dt>
+          <dd>{{ page.author | default: "ARC-M Team" }}</dd>
+        </div>
+        <div>
+          <dt>Affiliation</dt>
+          <dd>{{ page.affiliation | default: "ARC-M · TUM" }}</dd>
+        </div>
+        <div>
+          <dt>Published</dt>
+          <dd>{{ page.date | date: "%B %-d, %Y" }}</dd>
+        </div>
+      </dl>
+    </header>
+
+    {% if page.abstract %}
+    <section class="abstract mb-12">
+      <h2 class="text-xs tracking-widest uppercase text-neutral-500 mb-3">Abstract</h2>
+      <p>{{ page.abstract }}</p>
+    </section>
+    {% endif %}
+
+    <div class="prose prose-invert prose-lg max-w-none">
+      {{ content }}
+    </div>
+  </article>
+</div>
